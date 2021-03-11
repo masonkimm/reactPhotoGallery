@@ -1,0 +1,35 @@
+react - firebase
+
+Photo Gallery
+
+===SET UP===
+1) set up react app
+2) set up firebase
+  web >> name the project >> grab SDK
+  npm i firebase
+3) mkdir firebase > touch config.js >> paste SDK
+  import * as firebase from 'firebase/app'
+  import 'firebase/storage'
+  import 'firebase/firestore'
+
+  //Initialize Storage service
+  const projectStorage = firebase.storage();
+
+  // Initialize Firestore database
+  const projectFirestore = firebase.firestore();
+
+  export {projectStorage, projectFirestore}
+
+4) create firestore database
+  >> start in test mode: development
+5) start up storage service
+  >> rules: remove line=> `if request.auth != null`;
+
+===Upload Form ===
+1) touch UploadForm.js 
+  <input type="file" />
+
+===Firebase Storage Hooks===
+1) HARD. Need to review
+
+===Progress Bar===
